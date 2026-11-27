@@ -1,9 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 :root {
+    font-family: 'Alice', sans-serif;
+    font-weight: regular;
+    line-height: 150%;
     --background-color: #573z824;
     --surface-color: #F0E8C2;
     --text-color-primary: #291B1A;
     --text-color-secondary: #573A37;
     --text-color-on-bg: #F0E8C2;
+    color: var(--text-color-secondary);
 }
 
 body {
@@ -18,30 +26,43 @@ body {
     background-color: var(--surface-color);
     border-radius: 24px;
     margin: 48px auto;/* 48px -> Top, auto-> Restante da tela*/
-
 }
-
 
 img {
     border-radius: 16px;
 }
+
+main{
+    padding: 24px;
+}
+
+section + section {
+    margin-top: 24px
+}
+
+#about p + p{/* aqui declara-se que adiciona essa margin pegando uma tag <p> que tenha uma <p> anterior a ele */
+    margin-top: 12px;
+}
+
 h1 {
     font-size: 40px;
     line-height: 140%;
-    font-family: 'Alice', sans-serif;
-    font-weight: regular;
+
 }
 
 h2 {
     font-size: 24px;
-    line-height: 150%;
-    font-family: 'Alice', sans-serif;
-    font-weight: regular;
+}
+
+h1, h2 {
+    color: var(--text-color-primary);
+    margin-bottom: 12px;
+}
+
+ul{
+    padding-left: 24px;
 }
 
 p {
     font-size: 16px;
-    line-height: 150%;
-    font-family: 'Alice', sans-serif;
-    font-weight: regular;
 }
